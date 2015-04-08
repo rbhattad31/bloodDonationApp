@@ -72,6 +72,9 @@ class ApiController extends Controller
     		case 'donationRequest':
     			$model = DonationRequest::model()->findByPk($_GET['id']);
     			break;
+    		case 'lookupDetails':
+    				$model = LookupDetails::model()->findByPk($_GET['id']);
+    				break;
     		default:
     			$this->_sendResponse(501, sprintf(
     			'Mode <b>view</b> is not implemented for model <b>%s</b>',
